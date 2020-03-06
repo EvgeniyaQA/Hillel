@@ -8,6 +8,8 @@ public class Lessonfour {
 
         int sum= ClassFourLesson4.doSum(2,3);
         System.out.println("Result of sum : " +sum);//если статик- не надо создавать объект
+        int sum =ClassForLesson4.doSum(2,4,1);
+        System.out.println("For third : "+sum);
 
 
 
