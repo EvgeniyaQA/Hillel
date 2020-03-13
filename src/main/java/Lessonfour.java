@@ -8,12 +8,12 @@ public class Lessonfour {
 
         int sum= ClassFourLesson4.doSum(2,3);
         System.out.println("Result of sum : " +sum);//если статик- не надо создавать объект
-        int sum =ClassForLesson4.doSum(2,4,1);
+        int sum1 =ClassFourLesson4.doSum(2,4,1);
         System.out.println("For third : "+sum);
 
-
-
-
+        int sum2 =ClassFourLesson4.doSum(2,4,1, 6);
+        System.out.println("For forth : "+sum);
+        
 
         //Lessonfour obj1 = new Lessonfour();//создали новый объкт
         //double rand = Math.random()*10;
