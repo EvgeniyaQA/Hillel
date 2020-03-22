@@ -1,0 +1,37 @@
+public class HomeworkFour4 {
+    public int multiplicate(int a, int b){//not static
+        int resultat = a*b;
+        return resultat;
+    }
+    public static int divide(int a, int b){//static
+        int resultat = a/b;
+        return resultat;
+
+    }
+    public  int sum(int a, int b){//static
+        int resultat =a+b;
+        return resultat;
+    }
+    public  int deduct(int a, int b, int c) {//static
+        int resultat = a - b - c;
+        return resultat;
+
+    }
+    //---------------------------------------------------------------------------------------------------------------------
+    public static int overLoad(int d){
+        int totalAmout = d;
+        return d;
+    }
+    public static int overLoad(int d, int e){
+        int totalAmout = d+e;
+        return totalAmout;
+    }
+    public static int overLoad(int d, int e, int f){
+        int totalAmout = d+e+f;
+        return totalAmout;
+    }
+    public static int overLoad(int d,  int e, int f, int g){
+        int totalAmout = d+e+f+g;
+        return totalAmout;
+    }
+    }
