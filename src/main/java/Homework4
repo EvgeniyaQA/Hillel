@@ -1,0 +1,33 @@
+public class Homework4 {
+
+
+    public static void main(String[] args) {
+
+
+        HomeworkFour4 first = new HomeworkFour4();// не статик, надо создавать объект
+        int mult = first.multiplicate(2, 3);
+        System.out.println("The result of multiplication is :" + mult);
+
+
+        int sum = first.sum(12, 13);
+        System.out.println("The result of sum is :" + sum);
+
+        int ded = first.deduct(10, 2, 3);
+        System.out.println("The result of deduction is :" + ded);
+
+        System.out.println(HomeworkFour4.divide(2, 1));// статик не надо создавать объект
+        //------------------------------------------------------------------------------------------------
+        int totalAmount1 =HomeworkFour4.overLoad(2);
+        System.out.println(totalAmount1);
+        int totalAmount2 =HomeworkFour4.overLoad(2, 3);
+        System.out.println(totalAmount2);
+        int totalAmount3 =HomeworkFour4.overLoad(2, 3, 4);
+        System.out.println(totalAmount3);
+        int totalAmount4 =HomeworkFour4.overLoad(2, 3, 4, 5 );
+        System.out.println(totalAmount4);
+
+    }
+
+
+}
+
