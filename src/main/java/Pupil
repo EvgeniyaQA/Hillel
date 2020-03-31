@@ -1,0 +1,16 @@
+public class Pupil {
+    String name;
+    String surname;
+    int age;
+
+
+    Pupil (String name, String surname,int age) {
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+
+    }
+    void showInfo() {
+        System.out.println("Pupil name : " + name + ", "+  "Pupil surname : " + surname + ", " + "Pupil age : " + age);
+    }
+}
