@@ -1,0 +1,52 @@
+public class Tree {
+
+    String name;//name
+    int high;//вісота
+
+   // Tree(){//конструктор
+    //  name ="Unnamed";
+//    }
+
+    {
+        name = "Undefined";
+        high = 177;
+    }
+
+
+    Tree(){
+        //this("Undefined", 17); подставится 177
+    }
+    //Tree(String n){//еще один конструктор
+       // name=n;
+       // high = 17;
+
+
+    Tree(String name){
+    this(name, 17);
+    //Tree (String n , int a){
+        //name = n;
+       // high = a;
+
+    }
+        Tree(String name, int high) {//тут статикб єтот конструктор принаджележит классу
+            this.name = name;
+            this.high = high;
+        }
+
+
+        public void setName(String n){
+        name=n;
+
+        }
+        public String getName(){
+        return name;
+        }
+    void displayInfo(){//внутренний метод будем его візівать потом
+
+
+
+        System.out.printf("Name:  %s \tHigh: %d\n", name, high );
+    }
+
+}
+
