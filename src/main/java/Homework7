@@ -1,0 +1,30 @@
+public class Hometask7 {
+    public static void main(String[] args) {
+        Pupil person1 = new Pupil("Oleg", "Tkachuk", 11);
+        person1.showInfo();
+
+        Pupil person2 = new Pupil("Ivan", "Ivanov", 7);
+        person2.showInfo();
+
+        Pupil person3 = new Pupil("Andriy", "Vasiliev", 16);
+        person3.showInfo();
+
+        Teacher person4 = new Teacher("Valentyna", "Orlova", 33);
+        person4.showInfo();
+
+        Teacher person5 = new Teacher("Svetlana", "Novikova", 64);
+        person5.showInfo();
+
+        Teacher person6 = new Teacher("Olga", "Pavlova", 28);
+        person6.showInfo();
+
+        Teacher person7 = new Teacher("Elena", "Popova", 42);
+        person7.setName("Olena");
+        person7.setSurname("Vlasenko");
+        person7.setAge(54);
+        System.out.println("Teacher name " + person7.getName() + ", " + "Teacher surname : " + person7.getSurname() + ", " + "Teacher age :" + person7.getAge());
+
+    }
+}
+
+
