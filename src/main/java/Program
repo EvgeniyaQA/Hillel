@@ -1,0 +1,22 @@
+public class Program {
+    public static void main(String[] args) {
+
+        Tree elka= new Tree();// создание обїекта
+        elka.displayInfo();//візов метода displayinfoиз класса трии
+
+
+
+        Tree sosna= new Tree("Sosna");
+        sosna.displayInfo();
+
+        Tree kedrSibirskyi= new Tree("Kedr", 35);
+        kedrSibirskyi.displayInfo();
+        System.out.println("Kedrname "+ kedrSibirskyi.getName());
+
+
+
+        elka.name="El";
+        elka.high=5;
+        elka.displayInfo();
+    }
+}
