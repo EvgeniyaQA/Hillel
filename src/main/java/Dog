@@ -1,0 +1,54 @@
+public class Dog extends  Animal {//наследует класс енимах, переносятся основніе характеристики
+
+    private  int eyes;//поля
+    private int legs;
+    private int tail;
+    private int teeth;
+    private String coat;//шерсть- короткая длинная шелковистая
+
+
+
+
+
+    public Dog(String name, int eyes, int legs, int tail, int teeth, String coat, int brain, int body, int size, int weight) {//конструкьтор создали
+        super(name, 1, 1, size, weight);//через слово супер візов базового класса
+        this.eyes=eyes;// аргументі
+        this.legs= legs;
+        this.teeth = teeth;
+        this.tail= tail;
+        this.coat= coat;
+    }
+private  void chew(){
+    System.out.println("Dog.shew() called ");
+}//содаем методі
+//private void eat(){
+   // System.out.println("Dog.eat()  called ");
+
+
+    @Override//переопределение методов потому что 2 одинковіх метода в разніх классах но у дога другой функционал
+    public void eat() {
+        System.out.println("Dog.eat() called    ");
+        chew();
+        super.eat();//из родительского візвался.
+
+    }
+    public  void walk(){ //добавляем специфический функционал
+        System.out.println("Dog.walk() called ");
+        move(5);
+    }
+    public void run(){
+        System.out.println("Dog.run() called");
+        move (10);
+    }
+    private void moveLegs(int speed){
+        System.out.println("Dog.moveLegs() called");
+    }
+
+    @Override
+    public void move(int speed) {
+        System.out.println("Dog.move called");
+        moveLegs(speed);
+        super.move(speed);
+
+    }
+}
