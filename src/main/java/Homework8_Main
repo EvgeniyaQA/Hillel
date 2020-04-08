@@ -1,0 +1,14 @@
+package hometasks;
+
+public class Main {
+    public static void main(String[] args) {
+        Transport transport = new Transport(4, "Car", "Reno");
+        Plane plane = new Plane(2, "Destroyer", 11000, 2, "Turbo", "Fighter");
+        Cars cars= new Cars(4, "Minivan", "BMW", 3, "300", "AA 7777 AA");
+        plane.drive();
+        plane.loop();
+        cars.drive();
+
+    }
+
+}
