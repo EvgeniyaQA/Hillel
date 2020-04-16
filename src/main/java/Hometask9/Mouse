@@ -1,0 +1,27 @@
+package hometasks.Hometask9;
+
+public class Mouse {
+    private String type;
+    private boolean gamer;
+
+    public Mouse(String type, boolean gamer) {
+        this.type = type;
+        this.gamer = gamer;
+
+    }
+
+    public String getType(String type) {
+        System.out.println("The Mouse is wireless");
+        return type;
+    }
+
+    public  void isGamer(boolean gamer) {
+        if (gamer == true){
+        System.out.println("The mouse is for games");}
+        if (gamer==false){
+            System.out.println("The mouse is not for games");}
+
+        }
+
+    }
+
