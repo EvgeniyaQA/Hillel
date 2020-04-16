@@ -1,0 +1,18 @@
+package hometasks.Hometask9;
+
+public class Main {
+    public static void main(String[] args) {
+
+
+        Monitor monitor = new Monitor(1900, 22);
+        Keyboard keyboard = new Keyboard("Wireless", true);
+        Mouse mouse = new Mouse("Wireless", false);
+        SystemBlock systemBlock = new SystemBlock("Vertical", 90, "Gygabyte");
+
+        Computer computer = new Computer(monitor, keyboard, mouse, systemBlock);
+        computer.playGame();
+        computer.getMonitor().switchOn();
+        systemBlock.switchOn();
+
+    }
+}
