@@ -1,0 +1,28 @@
+package hometasks.Hometask9;
+
+public class SystemBlock {
+    private String type;
+    private int height;
+    private String motherboard;
+
+    public SystemBlock(String type, int height, String motherboard) {
+        this.type = type;
+        this.height = height;
+        this.motherboard = motherboard;
+    }
+    public void switchOn(){
+        System.out.println("Systemblock is switched on");
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public String getMotherboard() {
+        return motherboard;
+    }
+}
