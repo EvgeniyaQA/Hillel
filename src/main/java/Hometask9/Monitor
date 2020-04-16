@@ -1,0 +1,29 @@
+package hometasks.Hometask9;
+
+public class Monitor {
+    public String name;
+    private int resolution;
+    private int diagonal;
+
+    public Monitor(int resolution, int diagonal) {
+        this.resolution = resolution;
+        this.diagonal = diagonal;
+    }
+
+    public int getResolution() {
+        return resolution;
+    }
+
+    public int getDiagonal() {
+        return diagonal;
+    }
+    public String getName() {
+        return name;
+    }
+
+    public void switchOn(){
+        System.out.println("The Monitor is switched on");
+    }
+
+
+}
