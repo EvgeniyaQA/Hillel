@@ -1,0 +1,51 @@
+package lessonTen;
+
+import java.util.Objects;
+
+public class EqualsHash {
+
+    public static void main(String[] args) {
+Contact.equa();
+
+    }
+           static class Contact {
+               int id;
+               String name;
+               String phone;
+
+
+
+               public Contact(int id, String name, String phone) {
+                   this.id = id;
+                   this.name = name;
+                   this.phone = phone;
+               }
+
+               private static void equa() {
+                   Contact contact = new Contact(123, "Vasya", "066744787");
+                   Contact contact1 = new Contact(123, "Vasya", "0667447879");
+                   System.out.println(contact.equals(contact1));
+                   boolean isContactsEquals = contact.hashCode() == contact1.hashCode();
+                   if (isContactsEquals) {
+                       System.out.println("Hashcodes are the same");
+                   } else {
+                       System.out.println("Hashcodes are different");
+                   }
+               }
+
+               @Override
+               public boolean equals(Object o) {
+                   if (this == o) return true;
+                   if (o == null || getClass() != o.getClass()) return false;
+                   Contact contact = (Contact) o;
+                   return id == contact.id &&
+                           name.equals(contact.name) &&
+                           phone.equals(contact.phone);
+               }
+               @Override
+               public int hashCode() {
+                   return Objects.hash(id, name, phone);
+               }
+
+               }
+           }
