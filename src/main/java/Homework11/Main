@@ -1,25 +1,29 @@
 package hometasks;
 
-public abstract class Transport implements Carry {
-    private int wheels;
-    private String type;
-    private String name;
+public class Main {
+    public static void main(String[] args) {
+        Transport transport = new Transport(4, "Car", "Reno") {
+            @Override
+            public void drive() {
+
+            }
+
+            @Override
+            public void move(int speed) {
+
+            }
+        };
+        Plane plane = new Plane(2, "Destroyer", 11000, 2, "Turbo", "Fighter");
+        Cars cars= new Cars(4, "Minivan", "BMW", 3, "300", "AA 7777 AA");
+        //plane.drive();
+        //plane.loop();
+        //cars.drive();
+        cars.carry();
+        plane.carry();
 
 
-    public Transport(int wheels, String type, String name) {
-        this.wheels = wheels;
-        this.name = name;
-        this.type = type;
+
     }
 
-
-    public abstract void drive();
-
-    public abstract void move(int speed);
-
-    @Override
-    public void carry() {
-        System.out.println("Transport may carry everything");
-    }
 }
 
