@@ -1,0 +1,25 @@
+package hometasks;
+
+public abstract class Transport implements Carry {
+    private int wheels;
+    private String type;
+    private String name;
+
+
+    public Transport(int wheels, String type, String name) {
+        this.wheels = wheels;
+        this.name = name;
+        this.type = type;
+    }
+
+
+    public abstract void drive();
+
+    public abstract void move(int speed);
+
+    @Override
+    public void carry() {
+        System.out.println("Transport may carry everything");
+    }
+}
+
