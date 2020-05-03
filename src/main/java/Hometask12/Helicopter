@@ -1,0 +1,6 @@
+package hometasks;
+
+public class Helicopter {
+    public Helicopter() {
+    }
+}
