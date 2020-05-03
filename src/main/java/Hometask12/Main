@@ -1,0 +1,49 @@
+package hometasks;
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Transport transport = new Transport(4, "Car", "Reno");
+        Plane plane = new Plane(2, "Destroyer", 11000, 2, "Turbo", "Fighter");
+        Cars cars = new Cars(4, "Minivan", "BMW", 3, "300", "AA 7777 AA");
+        plane.drive();
+        plane.loop();
+        cars.drive();
+        System.out.println(" - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ");
+        Helicopter helicopter = new Helicopter(2, "Helicopter", "Apache");
+        LinkedHashMap linkedHashMap = new LinkedHashMap();
+        linkedHashMap.put(1, "Sikorsky");
+        linkedHashMap.put(2, "Apache");
+        linkedHashMap.put(3, "Mi-8");
+
+        Set set = linkedHashMap.entrySet();
+        for (Object element : set) {
+            Map.Entry mapEntry = (Map.Entry) element;
+            System.out.println("Among all famous helicopters on the " + mapEntry.getKey() + "place is " + mapEntry.getValue());
+        }
+
+        ArrayList list = new ArrayList();
+        list.add("Sikorsky");
+        list.add("Apache");
+        list.add("Mi-8");
+
+
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println("Famous helicopter is: " + list.get(i));
+        }
+
+        Map<String, String> map = new HashMap<String, String>();
+
+        map.put("Sikorsky", "Multifunctional");
+        map.put("Apache", "Attack");
+        map.put("Bell UH-1", "Battle & Multifunctional");
+        Set<String> keys = map.keySet();
+        for (String key : keys) {
+            System.out.println("Helicopter " + key + " is  " + map.get(key));
+            System.out.println("__________________________________________________________________________");
+
+        }
+    }
+}
+
