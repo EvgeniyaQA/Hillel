@@ -1,0 +1,49 @@
+package hometasks;
+
+public class Plane extends Transport {
+    private int height;
+    private int motor;
+    private String motorType;
+
+
+    public Plane(int wheels, String type, int hight, int motor, String motorType, String name) {
+        super(2, "Plane", "Mriya");
+        this.height = height;
+        this.motor = motor;
+        this.motorType = motorType;
+
+    }
+
+    public void fly() {
+        System.out.println("The plane is flying");
+
+    }
+
+    @Override
+    public void drive() {
+        System.out.println("The plane is driving");
+        fly();
+        super.drive();
+    }
+
+    public void loop(){
+        System.out.println("Plane is looping");
+        move(200);
+    }
+    public void fall(){
+        System.out.println("The plane is falling at speed : " );
+        move(600);
+    }
+    private void turn(int speed){
+        System.out.println("Plane is turning");
+    }
+    @Override
+    public void move(int speed) {
+        System.out.println("Plane is moving");
+        turn(speed );
+        super.move(speed);
+    }
+}
+
+
+
