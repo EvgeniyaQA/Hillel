@@ -1,0 +1,33 @@
+package hometasks;
+
+public class Cars extends Transport {
+    private int doors;
+    private String power;
+    private String number;
+
+    public Cars(int wheels, String type, String name, int doors, String power, String number) {
+        super(4, "Car", "Nissan");
+        this.doors = doors;
+        this.power = power;
+        this.number = number;
+    }
+    public void slowDown(int speed) {
+        System.out.println("Car is slowingDown");
+    }
+    @Override
+    public void drive() {
+        System.out.println("Car " + getNumber() + " is driving");
+        super.drive();
+    }
+
+    @Override
+    public void move(int speed) {
+        System.out.println("Car is moving");
+        slowDown(speed);
+        super.move(speed);
+    }
+
+    public String getNumber() {
+        return number;
+    }
+}
