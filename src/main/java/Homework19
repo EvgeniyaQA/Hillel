@@ -1,0 +1,49 @@
+package Lesson16;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class ArgoShop{
+        public static String browser = "chrome";
+        public static WebDriver driver;
+
+
+        public static void main(String[] args) throws Exception {
+
+            if (browser.equals(("chrome"))) {
+                WebDriverManager.chromedriver().setup();
+                driver = new ChromeDriver();
+            } else if (browser.equals(("firefox"))) {
+                WebDriverManager.firefoxdriver().setup();
+                driver = new FirefoxDriver();
+            } else if (browser.equals(("ie"))) {
+                WebDriverManager.iedriver().setup();
+                driver = new InternetExplorerDriver();
+
+                WebDriverManager.chromedriver().setup();
+                WebDriver driver = new ChromeDriver();
+
+            }
+
+            driver.get("https://argo.com.ua/");
+            driver.manage().window().maximize();
+            WebDriverWait wait = new WebDriverWait(driver,30);
+
+            driver.findElement(By.xpath("/html/body/div[2]/header/div[3]/nav/ul/li[1]/a")).click();
+            driver.findElement(By.xpath("//*[@id='custom_filter_properties']/div[1]/div[2]/div[4]/label")).click();
+            driver.findElement(By.xpath("//*[@id='custom_filter_properties']/div[1]/div[2]/div[5]/label")).click();
+            driver.findElement(By.xpath("//*[@id='custom_filter_properties']/div[3]/div[2]/div[1]/label")).click();
+            driver.findElement(By.xpath("//*[@id='custom_filter']/div[5]/a")).click();
+            driver.findElement(By.cssSelector("#input-number1")).sendKeys(Keys.chord(Keys.CONTROL, "a"), "555");
+            driver.findElement(By.xpath("/html/body/div[2]/main/div")).click();
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='custom_filter']/div[5]/a"))).click();
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='show-more-bt']"))).click();
+        }
+    }
